@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import logo from '../assets/logo.webp' // adjust this path to wherever your TLC logo lives
-
-/**
- * TLC Assist Living — Loader
- * Signature element: a traveling heartbeat/pulse trace (EKG line) — a direct,
- * literal nod to the caregiving/nursing subject matter rather than a generic
- * spinner. Runs on a real elapsed-time progress bar, then fades and unmounts.
- */
+import logo from '../assets/logo.webp'
 const Loader = ({ onFinish, minDuration = 2200 }) => {
     const [progress, setProgress] = useState(0)
     const [fadeOut, setFadeOut] = useState(false)
