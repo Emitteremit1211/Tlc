@@ -6,12 +6,8 @@ import {
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
-/* ---------------------------------------------
-   CONFIG
----------------------------------------------- */
-
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-
+const API_URL = 'https://tlc-6bt4.onrender.com';
+fetch(`${API_URL}/api/appointments`)
 const STEPS = ["Personal Info", "Schedule", "Service", "Review"];
 
 const services = [
@@ -36,9 +32,6 @@ const empty = {
     message: "", emergencyContact: "", insurance: "",
 };
 
-/* ---------------------------------------------
-   COMPONENT
----------------------------------------------- */
 
 export default function Appointment() {
     const [step, setStep] = useState(0);
@@ -215,16 +208,14 @@ export default function Appointment() {
                                     {STEPS.map((label, i) => (
                                         <React.Fragment key={i}>
                                             <div className="flex flex-col items-center gap-2">
-                                                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
-                                                    i < step ? "bg-[#1B8C86] text-white"
-                                                    : i === step ? "bg-[#0D2B3E] text-white scale-110 shadow-lg"
-                                                    : "bg-white/50 text-[#4A5D6B]/50"
-                                                }`}>
+                                                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${i < step ? "bg-[#1B8C86] text-white"
+                                                        : i === step ? "bg-[#0D2B3E] text-white scale-110 shadow-lg"
+                                                            : "bg-white/50 text-[#4A5D6B]/50"
+                                                    }`}>
                                                     {i < step ? <Check className="w-4 h-4" /> : i + 1}
                                                 </div>
-                                                <span className={`text-[11px] font-semibold hidden sm:block ${
-                                                    i === step ? "text-[#0D2B3E]" : i < step ? "text-[#1B8C86]" : "text-[#4A5D6B]/40"
-                                                }`}>
+                                                <span className={`text-[11px] font-semibold hidden sm:block ${i === step ? "text-[#0D2B3E]" : i < step ? "text-[#1B8C86]" : "text-[#4A5D6B]/40"
+                                                    }`}>
                                                     {label}
                                                 </span>
                                             </div>
@@ -321,11 +312,10 @@ export default function Appointment() {
                                                                 key={t}
                                                                 type="button"
                                                                 onClick={() => selectTime(t)}
-                                                                className={`py-3 px-2 rounded-xl text-xs font-bold transition-all ${
-                                                                    selected
+                                                                className={`py-3 px-2 rounded-xl text-xs font-bold transition-all ${selected
                                                                         ? "bg-[#0D2B3E] text-white shadow-md"
                                                                         : "tlc-input text-[#4A5D6B] hover:border-[#1B8C86] hover:text-[#0D2B3E]"
-                                                                }`}
+                                                                    }`}
                                                             >
                                                                 {t}
                                                             </button>
@@ -369,13 +359,11 @@ export default function Appointment() {
                                                         key={s.id}
                                                         type="button"
                                                         onClick={() => selectService(s.id)}
-                                                        className={`flex items-start gap-4 p-5 rounded-2xl text-left transition-all ${
-                                                            selected ? "tlc-glass-dark" : "tlc-input hover:border-[#1B8C86]/40"
-                                                        }`}
+                                                        className={`flex items-start gap-4 p-5 rounded-2xl text-left transition-all ${selected ? "tlc-glass-dark" : "tlc-input hover:border-[#1B8C86]/40"
+                                                            }`}
                                                     >
-                                                        <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                                                            selected ? "bg-white/10" : "bg-[#0D2B3E]/10"
-                                                        }`}>
+                                                        <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${selected ? "bg-white/10" : "bg-[#0D2B3E]/10"
+                                                            }`}>
                                                             <Icon className={`w-5 h-5 ${selected ? "text-[#7FDCD2]" : "text-[#0D2B3E]"}`} />
                                                         </div>
                                                         <div className="flex-1">
