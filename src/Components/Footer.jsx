@@ -17,8 +17,9 @@ const socialLinks = [
 
 const quickLinks = [
     { to: "/", label: "Home" },
-    { to: "/aboutus", label: "About Us" },
-    { to: "/services", label: "Our Services" },
+    { to: "/about", label: "About-Us" },
+    { to: "/services", label: "Services" },
+    { to: "/appointment", label: "Appointment" },
     { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact Us" },
 ]
@@ -40,10 +41,8 @@ const legalLinks = [
 ]
 
 const Footer = () => {
-  return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-[#0D2B3E] to-[#081C29] text-white">
-
-            {/* Fonts + liquid-glass helpers (kept local so this file styles correctly on its own) */}
+    return (
+        <footer className="relative overflow-hidden bg-gradient-to-b from-[#0D2B3E] to-[#081C29] text-white">
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
                 .tlc-display { font-family: 'Fraunces', Georgia, serif; }
@@ -72,7 +71,7 @@ const Footer = () => {
                     <div className="tlc-glass-dark rounded-2xl px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
                         <div>
                             <p className="text-white font-semibold text-base">Have questions about care?</p>
-                            <p className="text-white/50 text-sm mt-0.5">Reach out anytime — our team is available around the clock.</p>
+                            <p className="text-white/50 text-sm mt-0.5">Reach out anytime our team is available around the clock.</p>
                         </div>
                         <div className="flex gap-3 flex-shrink-0">
                             <Link to="/appointment" className="bg-[#1B8C86] text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-[#166f6a] transition">
@@ -90,7 +89,7 @@ const Footer = () => {
             <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                    {/* Column 1 — Brand */}
+                    {/* Column 1 Brand */}
                     <div className="lg:col-span-1">
                         <h2 className="tlc-display text-xl font-semibold mb-2 text-white">
                             TLC Assist Living
@@ -143,7 +142,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Column 2 — Quick Links */}
+                    {/* Column 2 Quick Links */}
                     <div>
                         <h3 className="text-sm font-bold uppercase tracking-widest text-white/90 mb-2">Quick Links</h3>
                         <div className="w-8 h-0.5 bg-[#1B8C86] mb-6" />
@@ -162,7 +161,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3 — Services */}
+                    {/* Column 3 Services */}
                     <div>
                         <h3 className="text-sm font-bold uppercase tracking-widest text-white/90 mb-2">Services</h3>
                         <div className="w-8 h-0.5 bg-[#1B8C86] mb-6" />
@@ -181,7 +180,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 4 — Visit Us + Social */}
+                    {/* Column 4 Visit Us + Social */}
                     <div>
                         <h3 className="text-sm font-bold uppercase tracking-widest text-white/90 mb-2">Visit Us</h3>
                         <div className="w-8 h-0.5 bg-[#1B8C86] mb-6" />
@@ -237,14 +236,20 @@ const Footer = () => {
                             Copyright © {new Date().getFullYear()}{" "}
                             <span className="text-white/50 font-semibold">TLC Assist Living</span>. All rights reserved.
                         </p>
-                        <Link to="/adminlogin" className="text-white/15 hover:text-white/40 transition">
-                            Admin
-                        </Link>
+                        <div className='flex gap-2'>
+                            <p>
+                                designed and developed by 
+                                <a href="https://personal-portfolio-rho-three-54.vercel.app/" target='_blank' className='hover:text-blue-600'>Temitope</a>
+                            </p>
+                            <Link to="/adminlogin" className="text-white/15 hover:text-white/40 transition">
+                                Admin
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
-  )
+    )
 }
 
 export default Footer

@@ -6,9 +6,9 @@ import Footer from '../Components/Footer'
 const Homepage = () => {
   return (
     <>
-    <Navbar/>
-    <Body/>
-    <Footer/>
+      <Navbar />
+      <Body />
+      <Footer />
     </>
   )
 }

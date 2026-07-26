@@ -42,13 +42,13 @@ const slides = [
         title: "Care That Feels Like Family",
         desc: "Personalized home-care and nursing support for seniors, those recovering from illness, or anyone who needs a steady hand at home. Every caregiver is certified, vetted, and chosen for genuine compassion.",
         btn: "Read More",
-        link: "/aboutus",
+        link: "/about",
     },
     {
         image: slide2,
         eyebrow: "Clinical Support, At Home",
         title: "Skilled Nursing at Your Doorstep",
-        desc: "Registered nurses and licensed practitioners handling medication management, wound care, and post-surgical recovery — so hospital-grade attention never means leaving the house.",
+        desc: "Registered nurses and licensed practitioners handling medication management, wound care, and post-surgical recovery  so hospital-grade attention never means leaving the house.",
         btn: "Book a Nurse",
         link: "/contact",
     },
@@ -56,7 +56,7 @@ const slides = [
         image: slide3,
         eyebrow: "Support For Every Season",
         title: "From Daily Help to Hospice Care",
-        desc: "Whatever stage of life your loved one is in, our team adapts alongside them — companionship, therapy, memory care, or end-of-life support, always delivered with dignity.",
+        desc: "Whatever stage of life your loved one is in, our team adapts alongside them  companionship, therapy, memory care, or end-of-life support, always delivered with dignity.",
         btn: "Get Started",
         link: "/services",
     },
@@ -70,7 +70,7 @@ const services = [
     },
     {
         title: "Personal Care Assistance",
-        desc: "Help with bathing, grooming, dressing, eating, and mobility — delivered with empathy, patience, and respect for independence.",
+        desc: "Help with bathing, grooming, dressing, eating, and mobility  delivered with empathy, patience, and respect for independence.",
         icon: HeartHandshake,
     },
     {
@@ -83,31 +83,31 @@ const services = [
         desc: "Round-the-clock support for clients who need continuous supervision, companionship, and peace of mind through the night.",
         icon: Moon,
     },
-    {
-        title: "Therapy Services (PT/OT/ST)",
-        desc: "Licensed physical, occupational, and speech therapists working in the home to rebuild strength, mobility, and independence.",
-        icon: Activity,
-    },
-    {
-        title: "Friendly Assistance for Elders",
-        desc: "Light housekeeping, meal preparation, errands, and genuine conversation that keeps daily life connected and unhurried.",
-        icon: Users,
-    },
-    {
-        title: "Hospice Care",
-        desc: "Working closely with families and physicians to manage comfort and pain, offering steady companionship through a sensitive time.",
-        icon: Feather,
-    },
-    {
-        title: "One-on-One Care (HHA)",
-        desc: "A dedicated caregiver focused solely on your loved one, ensuring consistent attention tailored to their specific needs.",
-        icon: UserCheck,
-    },
+    // {
+    //     title: "Therapy Services (PT/OT/ST)",
+    //     desc: "Licensed physical, occupational, and speech therapists working in the home to rebuild strength, mobility, and independence.",
+    //     icon: Activity,
+    // },
+    // {
+    //     title: "Friendly Assistance for Elders",
+    //     desc: "Light housekeeping, meal preparation, errands, and genuine conversation that keeps daily life connected and unhurried.",
+    //     icon: Users,
+    // },
+    // {
+    //     title: "Hospice Care",
+    //     desc: "Working closely with families and physicians to manage comfort and pain, offering steady companionship through a sensitive time.",
+    //     icon: Feather,
+    // },
+    // {
+    //     title: "One-on-One Care (HHA)",
+    //     desc: "A dedicated caregiver focused solely on your loved one, ensuring consistent attention tailored to their specific needs.",
+    //     icon: UserCheck,
+    // },
 ];
 
 const whyChooseUs = [
     { title: "Vetted, Certified Caregivers", desc: "Every caregiver clears background checks and certification before ever entering a client's home.", icon: "🛡️" },
-    { title: "Always-On Availability", desc: "Care doesn't keep business hours, so neither do we — day, night, and weekends included.", icon: "🌙" },
+    { title: "Always-On Availability", desc: "Care doesn't keep business hours, so neither do we  day, night, and weekends included.", icon: "🌙" },
     { title: "Plans Built Around the Person", desc: "No two care plans look alike; each is shaped by the client's routine, health needs, and preferences.", icon: "🧩" },
     { title: "Family Stays In the Loop", desc: "Regular updates and open communication mean families are never left guessing.", icon: "💬" },
     { title: "Rooted in Massachusetts", desc: "Based in Randolph and serving surrounding communities with local, dependable support.", icon: "📍" },
@@ -117,7 +117,7 @@ const whyChooseUs = [
 const howItWorks = [
     { icon: CalendarCheck, title: "Schedule a Consultation", desc: "Tell us about your care needs. We listen, assess, and guide you toward the right next step." },
     { icon: ClipboardList, title: "Personalized Care Planning", desc: "We match you with the right caregiver and build a care plan shaped around your situation." },
-    { icon: UserPlus, title: "Care Begins at Home", desc: "Your caregiver steps in — from companionship and daily help to skilled nursing care." },
+    { icon: UserPlus, title: "Care Begins at Home", desc: "Your caregiver steps in  from companionship and daily help to skilled nursing care." },
     { icon: RefreshCcw, title: "Ongoing Support & Adjustments", desc: "We monitor progress and adjust the plan as needs change, so care never falls behind." },
 ];
 
@@ -370,7 +370,7 @@ const Body = () => {
                                     care solutions that bring comfort, confidence, and peace of mind.
                                 </p>
                                 <div className="mt-8">
-                                    <Link to="/aboutus">
+                                    <Link to="/about">
                                         <button className="bg-[#0D2B3E] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#1B8C86] transition">
                                             Learn More About Us →
                                         </button>
@@ -405,7 +405,7 @@ const Body = () => {
                         <p className="mt-6 text-[#4A5D6B] leading-relaxed">
                             Whether your loved one needs skilled medical support, daily personal care, or
                             compassionate companionship, our certified caregivers deliver reliable, respectful,
-                            and personalized care — all within the comfort of home.
+                            and personalized care  all within the comfort of home.
                         </p>
                     </div>
 
@@ -514,7 +514,7 @@ const Body = () => {
                         </h2>
                         <p className="mt-4 text-gray-500 max-w-xl mx-auto leading-8">
                             Reach out today and our team will help you find the right care solution for your
-                            loved one — with support available around the clock.
+                            loved one  with support available around the clock.
                         </p>
                         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                             <Link to="/contact">

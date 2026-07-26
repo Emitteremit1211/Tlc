@@ -26,7 +26,7 @@ const Navbar = () => {
     const linkClass = (path) =>
         `relative font-semibold text-[15px] transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-[#17B7F5] after:transition-all after:duration-300 ${pathname === path
             ? "text-[#17B7F5] after:w-full"
-            : "text-white hover:text-[#17B7F5] after:w-0 hover:after:w-full"
+            : "text-gray-500 hover:text-[#17B7F5] after:w-0 hover:after:w-full"
         }`;
 
     return (
@@ -58,7 +58,7 @@ const Navbar = () => {
                             Home
                         </Link>
 
-                        <Link to="/aboutus" className={linkClass("/aboutus")}>
+                        <Link to="/about" className={linkClass("/about")}>
                             About
                         </Link>
 
@@ -71,7 +71,7 @@ const Navbar = () => {
                         </Link>
 
                         <Link to="/jobs" className={linkClass("/jobs")}>
-                            Jobs
+                            Blog
                         </Link>
 
                         <Link to="/contact" className={linkClass("/contact")}>
@@ -79,7 +79,7 @@ const Navbar = () => {
                         </Link>
 
                         <Link
-                            to="/apply"
+                            to="/contact"
                             className="
   relative overflow-hidden
   px-6 py-3 rounded-full
@@ -94,7 +94,7 @@ const Navbar = () => {
   hover:shadow-cyan-500/50
   transition-all duration-300"
                         >
-                            Apply Now
+                            Request Service
                         </Link>
                     </div>
 
@@ -125,16 +125,6 @@ const Navbar = () => {
 
                     <div className="flex items-center gap-3">
                         <img src={logo} className="h-10" alt="" />
-
-                        <div>
-                            <h2 className="font-bold text-[#1B3A5C] leading-5">
-                                L&L Staffing
-                            </h2>
-
-                            <p className="text-[#17B7F5] text-sm">
-                                Solution
-                            </p>
-                        </div>
                     </div>
 
                     <button onClick={() => setIsOpen(false)}>
@@ -150,8 +140,8 @@ const Navbar = () => {
                         Home
                     </Link>
 
-                    <Link onClick={() => setIsOpen(false)} className={linkClass("/aboutus")} to="/aboutus">
-                        About Us
+                    <Link onClick={() => setIsOpen(false)} className={linkClass("/about")} to="/about">
+                        About
                     </Link>
 
                     <Link onClick={() => setIsOpen(false)} className={linkClass("/services")} to="/services">
@@ -163,7 +153,7 @@ const Navbar = () => {
                     </Link>
 
                     <Link onClick={() => setIsOpen(false)} className={linkClass("/jobs")} to="/jobs">
-                        Jobs
+                        Blog
                     </Link>
 
                     <Link onClick={() => setIsOpen(false)} className={linkClass("/contact")} to="/contact">
@@ -175,7 +165,7 @@ const Navbar = () => {
                         onClick={() => setIsOpen(false)}
                         className="mt-3 text-center bg-[#17B7F5] hover:bg-[#139fd6] text-white py-3 rounded-lg font-semibold transition"
                     >
-                        Apply Now
+                        Request a Service
                     </Link>
 
                 </div>
