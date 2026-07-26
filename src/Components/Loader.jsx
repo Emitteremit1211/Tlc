@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import logo from '../assets/logo.webp'
+import logo from '../assets/Logo.webp'
+
 const Loader = ({ onFinish, minDuration = 2200 }) => {
     const [progress, setProgress] = useState(0)
     const [fadeOut, setFadeOut] = useState(false)
