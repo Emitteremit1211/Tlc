@@ -9,6 +9,8 @@ import Navbar from "./Components/Navbar";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
 import Appointment from "./Pages/Appointment";
+import Faq from "./Pages/Faq";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   const location = useLocation();
@@ -22,13 +24,17 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/aboutus" element={<Navbar />} />
+        <Route path="/navbar" element={<Navbar />} />
         <Route path="/body" element={<Body />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/appointment" element={<Appointment />} />
+        <Route path="/faq" element={<Faq />} />
+
+
+         <Route path="*" element={<NotFound />} />
       </Routes>
 
       {loading && <Loader onFinish={() => setLoading(false)} />}

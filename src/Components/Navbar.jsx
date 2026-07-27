@@ -26,7 +26,7 @@ const Navbar = () => {
     const linkClass = (path) =>
         `relative font-semibold text-[15px] transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-[#17B7F5] after:transition-all after:duration-300 ${pathname === path
             ? "text-[#17B7F5] after:w-full"
-            : "text-gray-500 hover:text-[#17B7F5] after:w-0 hover:after:w-full"
+            : "text-gray-700 hover:text-[#17B7F5] after:w-0 hover:after:w-full"
         }`;
 
     return (
@@ -76,6 +76,9 @@ const Navbar = () => {
 
                         <Link to="/contact" className={linkClass("/contact")}>
                             Contact
+                        </Link>
+                        <Link to="/faq" className={linkClass("/faq")}>
+                            FAQ
                         </Link>
 
                         <Link
@@ -160,6 +163,9 @@ const Navbar = () => {
                         Contact
                     </Link>
 
+                    <Link to="/faq" className={linkClass("/faq")}>
+                        FAQ
+                    </Link>
                     <Link
                         to="/apply"
                         onClick={() => setIsOpen(false)}

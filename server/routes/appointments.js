@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Appointment = require("../models/Appointment");
+const requireAuth = require("../middleware/requireAuth");
 
-// POST /api/appointments — create a new booking (used by the public Appointment page)
 router.post("/", async (req, res) => {
     try {
         const {
@@ -15,17 +15,8 @@ router.post("/", async (req, res) => {
         }
 
         const appointment = new Appointment({
-            name,
-            email,
-            phone,
-            service,
-            preferredDate,
-            preferredTime,
-            message,
-            gender,
-            dob,
-            emergencyContact,
-            insurance,
+            name, email, phone, service, preferredDate, preferredTime,
+            message, gender, dob, emergencyContact, insurance,
         });
 
         const saved = await appointment.save();
@@ -36,8 +27,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-// GET /api/appointments — list all bookings (used by the Admin panel)
-router.get("/", async (req, res) => {
+router.get("/", requireAuth, async (req, res) => {
     try {
         const appointments = await Appointment.find().sort({ createdAt: -1 });
         res.json(appointments);
@@ -47,8 +37,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-// PATCH /api/appointments/:id — update status (e.g. mark Confirmed/Cancelled from the admin panel)
-router.patch("/:id", async (req, res) => {
+router.patch("/:id", requireAuth, async (req, res) => {
     try {
         const { status } = req.body;
         const allowed = ["Pending", "Confirmed", "Cancelled", "Completed"];
@@ -74,8 +63,7 @@ router.patch("/:id", async (req, res) => {
     }
 });
 
-// DELETE /api/appointments/:id — remove a booking (used by the Admin panel)
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", requireAuth, async (req, res) => {
     try {
         const deleted = await Appointment.findByIdAndDelete(req.params.id);
 

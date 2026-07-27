@@ -21,7 +21,7 @@ const Loader = ({ onFinish, minDuration = 2200 }) => {
                 setFadeOut(true)
                 setTimeout(() => {
                     if (onFinish) onFinish()
-                }, 650) // matches the fade-out transition duration below
+                }, 650) 
             }
         }
 

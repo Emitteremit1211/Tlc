@@ -39,11 +39,11 @@ const appointmentSchema = new mongoose.Schema(
             required: true,
         },
         preferredDate: {
-            type: String, // stored as "YYYY-MM-DD" from the date input
+            type: String,
             required: true,
         },
         preferredTime: {
-            type: String, // e.g. "Morning", "Afternoon", "Evening"
+            type: String,
             required: true,
         },
         message: {
@@ -56,7 +56,7 @@ const appointmentSchema = new mongoose.Schema(
             default: "Pending",
         },
     },
-    { timestamps: true } // adds createdAt / updatedAt automatically
+    { timestamps: true }
 );
 
 module.exports = mongoose.model("Appointment", appointmentSchema);
