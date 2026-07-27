@@ -44,12 +44,12 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blogdetails" element={<BlogDetails />} />
         <Route path="/bloghero" element={<BlogHero />} />
-        <Route path="/bloghero" element={<EmptyState/>} />
-        <Route path="/bloghero" element={<FeaturedPost/>} />
-        <Route path="/bloghero" element={<BlogGrid />} />
-        <Route path="/bloghero" element={<BlogCard/>} />
-        <Route path="/bloghero" element={<Categories />} />
-        <Route path="/bloghero" element={<SkeletonCard/>} />
+        <Route path="/empty" element={<EmptyState/>} />
+        <Route path="/featured" element={<FeaturedPost/>} />
+        <Route path="/bloggrid" element={<BlogGrid />} />
+        <Route path="/blogcard" element={<BlogCard/>} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/skeleton" element={<SkeletonCard/>} />
         {/* <Route path="/bloghero" element={</>} /> */}
 
 
