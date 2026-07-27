@@ -11,6 +11,15 @@ import Contact from "./Pages/Contact";
 import Appointment from "./Pages/Appointment";
 import Faq from "./Pages/Faq";
 import NotFound from "./Pages/NotFound";
+import Blog from "./Pages/Blog";
+import BlogDetails from "./Pages/BlogDetails";
+import SkeletonCard from "./components/blog/SkeletonCard";
+import Categories from "./components/blog/Categories";
+import BlogCard from "./components/blog/BlogCard";
+import BlogGrid from "./components/blog/BlogGrid";
+import FeaturedPost from "./components/blog/FeaturedPost";
+import EmptyState from "./components/blog/EmptyState";
+import BlogHero from "./components/blog/BlogHero";
 
 function App() {
   const location = useLocation();
@@ -32,6 +41,17 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blogdetails" element={<BlogDetails />} />
+        <Route path="/bloghero" element={<BlogHero />} />
+        <Route path="/bloghero" element={<EmptyState/>} />
+        <Route path="/bloghero" element={<FeaturedPost/>} />
+        <Route path="/bloghero" element={<BlogGrid />} />
+        <Route path="/bloghero" element={<BlogCard/>} />
+        <Route path="/bloghero" element={<Categories />} />
+        <Route path="/bloghero" element={<SkeletonCard/>} />
+        {/* <Route path="/bloghero" element={</>} /> */}
+
 
 
          <Route path="*" element={<NotFound />} />

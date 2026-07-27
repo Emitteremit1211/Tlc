@@ -70,7 +70,7 @@ const Navbar = () => {
                             Appointment
                         </Link>
 
-                        <Link to="/jobs" className={linkClass("/jobs")}>
+                        <Link to="/blog" className={linkClass("/blog")}>
                             Blog
                         </Link>
 
@@ -155,7 +155,7 @@ const Navbar = () => {
                         Appointment
                     </Link>
 
-                    <Link onClick={() => setIsOpen(false)} className={linkClass("/jobs")} to="/jobs">
+                    <Link onClick={() => setIsOpen(false)} className={linkClass("/blog")} to="/blog">
                         Blog
                     </Link>
 

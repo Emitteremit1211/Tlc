@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const blogRoutes = require("./routes/blogs");
 
 const appointmentRoutes = require("./routes/appointments");
 const authRoutes = require("./routes/auth");
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use("/api/appointments", appointmentRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/blogs", blogRoutes);
 
 app.get("/", (req, res) => {
     res.send("TLC Assist Living API is running.");
