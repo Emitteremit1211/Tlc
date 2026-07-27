@@ -20,6 +20,8 @@ import BlogGrid from "./components/blog/BlogGrid";
 import FeaturedPost from "./components/blog/FeaturedPost";
 import EmptyState from "./components/blog/EmptyState";
 import BlogHero from "./components/blog/BlogHero";
+import SearchBar from "./components/blog/SearchBar";
+import CTA from "./components/blog/CTA";
 
 function App() {
   const location = useLocation();
@@ -50,6 +52,8 @@ function App() {
         <Route path="/blogcard" element={<BlogCard/>} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/skeleton" element={<SkeletonCard/>} />
+        <Route path="/search" element={<SearchBar/>} />
+        <Route path="/cta" element={<CTA/>} />
         {/* <Route path="/bloghero" element={</>} /> */}
 
 
