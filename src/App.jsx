@@ -13,15 +13,16 @@ import Faq from "./Pages/Faq";
 import NotFound from "./Pages/NotFound";
 import Blog from "./Pages/Blog";
 import BlogDetails from "./Pages/BlogDetails";
-import SkeletonCard from "./components/blog/SkeletonCard";
-import Categories from "./components/blog/Categories";
-import BlogCard from "./components/blog/BlogCard";
-import BlogGrid from "./components/blog/BlogGrid";
-import FeaturedPost from "./components/blog/FeaturedPost";
-import EmptyState from "./components/blog/EmptyState";
-import BlogHero from "./components/blog/BlogHero";
-import SearchBar from "./components/blog/SearchBar";
-import CTA from "./components/blog/CTA";
+import SkeletonCard from "./Components/blog/SkeletonCard";
+import Categories from "./Components/blog/Categories";
+import BlogCard from "./Components/blog/BlogCard";
+import BlogGrid from "./Components/blog/BlogGrid";
+import FeaturedPost from "./Components/blog/FeaturedPost";
+import EmptyState from "./Components/blog/EmptyState";
+// import BlogHero from "./components/blog/BlogHero";
+import SearchBar from "./Components/blog/SearchBar";
+import CTA from "./Components/blog/CTA";
+import BlogHero from "./Components/blog/BlogHero";
 
 function App() {
   const location = useLocation();

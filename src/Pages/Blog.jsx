@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import BlogHero from "../components/blog/BlogHero";
-import FeaturedPost from "../components/blog/FeaturedPost";
-import SearchBar from "../components/blog/SearchBar";
-import Categories from "../components/blog/Categories";
-import BlogGrid from "../components/blog/BlogGrid";
-import Newsletter from "../components/blog/Newsletter";
-import CTA from "../components/blog/CTA";
-import SkeletonCard from "../components/blog/SkeletonCard";
-import EmptyState from "../components/blog/EmptyState";
+import BlogHero from "../Components/blog/BlogHero";
+import FeaturedPost from "../Components/blog/FeaturedPost";
+import SearchBar from "../Components/blog/SearchBar";
+import Categories from "../Components/blog/Categories";
+import BlogGrid from "../Components/blog/BlogGrid";
+import Newsletter from "../Components/blog/Newsletter";
+import CTA from "../Components/blog/CTA";
+import SkeletonCard from "../Components/blog/SkeletonCard";
+import EmptyState from "../Components/blog/EmptyState";
 
 import { getBlogs } from "../services/blogApi";
 import Footer from "../Components/Footer";
