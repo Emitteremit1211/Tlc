@@ -12,7 +12,7 @@ import EmptyState from "../Components/blog/EmptyState";
 import { getBlogs } from "../services/blogApi";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
-
+console.log(import.meta.env.VITE_API_URL);
 const Blog = () => {
 
     const [blogs, setBlogs] = useState([]);

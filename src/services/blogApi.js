@@ -1,21 +1,22 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL =
+  import.meta.env.VITE_API_URL || "https://tlc-6bt4.onrender.com";
 
 export async function getBlogs() {
-    const res = await fetch(`${API_URL}/api/blogs`);
+  const res = await fetch(`${API_URL}/api/blogs`);
 
-    if (!res.ok) {
-        throw new Error("Failed to fetch blogs");
-    }
+  if (!res.ok) {
+    throw new Error("Failed to fetch blogs");
+  }
 
-    return res.json();
+  return await res.json();
 }
 
 export async function getBlog(slug) {
-    const res = await fetch(`${API_URL}/api/blogs/${slug}`);
+  const res = await fetch(`${API_URL}/api/blogs/${slug}`);
 
-    if (!res.ok) {
-        throw new Error("Blog not found");
-    }
+  if (!res.ok) {
+    throw new Error("Blog not found");
+  }
 
-    return res.json();
+  return await res.json();
 }
