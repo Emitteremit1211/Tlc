@@ -4,24 +4,18 @@ const EmptyState = () => {
 
     return (
 
-        <div className="text-center py-24">
+        <div className="tlc-glass max-w-lg mx-auto text-center py-16 px-8 rounded-3xl">
 
-            <div className="mx-auto w-24 h-24 rounded-full bg-slate-100 flex items-center justify-center">
-
-                <FileSearch size={40} className="text-slate-500"/>
-
+            <div className="mx-auto w-20 h-20 rounded-full bg-[#0D2B3E]/10 flex items-center justify-center">
+                <FileSearch size={36} className="text-[#0D2B3E]" />
             </div>
 
-            <h2 className="text-3xl font-bold mt-8">
-
+            <h2 className="tlc-display text-2xl font-semibold mt-7 text-[#0D2B3E]">
                 No Blog Found
-
             </h2>
 
-            <p className="text-slate-500 mt-4">
-
+            <p className="text-[#4A5D6B] mt-3 text-sm">
                 Try another keyword or category.
-
             </p>
 
         </div>

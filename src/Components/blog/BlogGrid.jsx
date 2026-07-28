@@ -4,17 +4,17 @@ const BlogGrid = ({ blogs }) => {
 
     return (
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
 
-            {blogs.map(blog => (
+            {blogs.map((blog, i) => (
 
-                <BlogCard
-
+                <div
                     key={blog._id}
-
-                    blog={blog}
-
-                />
+                    className="tlc-fade-up"
+                    style={{ animationDelay: `${i * 70}ms` }}
+                >
+                    <BlogCard blog={blog} />
+                </div>
 
             ))}
 

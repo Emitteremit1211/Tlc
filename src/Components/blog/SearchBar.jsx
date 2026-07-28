@@ -2,14 +2,12 @@ import { Search } from "lucide-react";
 
 const SearchBar = ({ value, onChange }) => {
     return (
-        <div className="bg-white/80 backdrop-blur-2xl border border-slate-200 rounded-3xl shadow-xl p-5">
+        <div className="tlc-glass rounded-3xl p-5">
 
             <div className="flex items-center gap-4">
 
-                <div className="w-12 h-12 rounded-2xl bg-teal-600 flex items-center justify-center">
-
-                    <Search className="text-white w-6 h-6" />
-
+                <div className="w-11 h-11 rounded-2xl bg-[#0D2B3E] flex items-center justify-center shrink-0">
+                    <Search className="text-white w-5 h-5" />
                 </div>
 
                 <input
@@ -17,7 +15,7 @@ const SearchBar = ({ value, onChange }) => {
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                     placeholder="Search healthcare articles..."
-                    className="flex-1 bg-transparent outline-none text-lg"
+                    className="flex-1 bg-transparent outline-none text-base text-[#0D2B3E] placeholder:text-[#4A5D6B]/50"
                 />
 
             </div>

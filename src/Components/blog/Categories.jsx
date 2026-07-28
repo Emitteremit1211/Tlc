@@ -13,10 +13,10 @@ const Categories = ({ blogs, active, setActive }) => {
                 <button
                     key={category}
                     onClick={() => setActive(category)}
-                    className={`px-5 py-3 rounded-full transition ${
+                    className={`px-5 py-2.5 rounded-full text-sm font-semibold transition ${
                         active === category
-                            ? "bg-teal-600 text-white"
-                            : "bg-white shadow text-slate-700 hover:bg-slate-100"
+                            ? "bg-[#0D2B3E] text-white"
+                            : "tlc-glass text-[#4A5D6B] hover:text-[#0D2B3E]"
                     }`}
                 >
                     {category}

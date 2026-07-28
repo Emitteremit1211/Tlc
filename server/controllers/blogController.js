@@ -51,7 +51,7 @@ const createBlog = async (req, res) => {
     }
 };
 
-/* ---------------- GET ALL (PUBLIC) ---------------- */
+/* ---------------- GET ALL (PUBLIC — published only) ---------------- */
 
 const getBlogs = async (req, res) => {
     try {
@@ -69,7 +69,7 @@ const getBlogs = async (req, res) => {
     }
 };
 
-/* ---------------- GET ONE (PUBLIC) ---------------- */
+/* ---------------- GET ONE (PUBLIC — published only, by slug) ---------------- */
 
 const getBlog = async (req, res) => {
     try {
@@ -89,6 +89,33 @@ const getBlog = async (req, res) => {
         res.status(500).json({
             error: err.message,
         });
+    }
+};
+
+/* ---------------- GET ALL (ADMIN — every status) ---------------- */
+
+const getAdminBlogs = async (req, res) => {
+    try {
+        const blogs = await Blog.find().sort({ createdAt: -1 });
+        res.json(blogs);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+/* ---------------- GET ONE (ADMIN — every status, by ID) ---------------- */
+
+const getAdminBlogById = async (req, res) => {
+    try {
+        const blog = await Blog.findById(req.params.id);
+
+        if (!blog) {
+            return res.status(404).json({ error: "Blog not found" });
+        }
+
+        res.json(blog);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
     }
 };
 
@@ -166,6 +193,8 @@ module.exports = {
     createBlog,
     getBlogs,
     getBlog,
+    getAdminBlogs,
+    getAdminBlogById,
     updateBlog,
     deleteBlog,
 };
