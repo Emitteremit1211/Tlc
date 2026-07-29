@@ -10,20 +10,7 @@ const authRoutes = require("./routes/auth");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Configure CORS to allow your admin panel and main website
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:5173',
-  'https://tlc-admin-phi.vercel.app',
-  'https://tlc-fbt4.onrender.com',
-];
-
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true,
-}));
-
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/appointments", appointmentRoutes);
