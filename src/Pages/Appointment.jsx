@@ -367,8 +367,8 @@ export default function Appointment() {
                                                             <Icon className={`w-5 h-5 ${selected ? "text-[#7FDCD2]" : "text-[#0D2B3E]"}`} />
                                                         </div>
                                                         <div className="flex-1">
-                                                            <p className={`font-semibold text-sm ${selected ? "text-white" : "text-[#0D2B3E]"}`}>{s.label}</p>
-                                                            <p className={`text-xs mt-0.5 ${selected ? "text-white/60" : "text-[#4A5D6B]"}`}>{s.desc}</p>
+                                                            <p className={`font-semibold text-sm ${selected ? "text-gray-500" : "text-[#0D2B3E]"}`}>{s.label}</p>
+                                                            <p className={`text-xs mt-0.5 ${selected ? "text-gray-500" : "text-[#4A5D6B]"}`}>{s.desc}</p>
                                                         </div>
                                                         {selected && <Check className="w-5 h-5 text-[#7FDCD2] flex-shrink-0 mt-0.5" />}
                                                     </button>
@@ -438,7 +438,7 @@ export default function Appointment() {
                                                 {selectedService ? (
                                                     <div className="flex items-center gap-3">
                                                         <div className="w-10 h-10 bg-[#0D2B3E] rounded-xl flex items-center justify-center">
-                                                            <selectedService.icon className="w-5 h-5 text-white" />
+                                                            <selectedService.icon className="w-5 h-5 text-gray-500" />
                                                         </div>
                                                         <div>
                                                             <p className="font-semibold text-[#0D2B3E] text-sm">{selectedService.label}</p>
@@ -457,7 +457,7 @@ export default function Appointment() {
                                                 </div>
                                             )}
 
-                                            <div className="tlc-glass-dark rounded-2xl p-4 text-xs text-white/60 leading-relaxed">
+                                            <div className="tlc-glass-dark rounded-2xl p-4 text-xs text-gray-500 leading-relaxed">
                                                 By confirming, you agree that TLC Assist Living may contact you via your
                                                 provided email and phone to confirm and coordinate your care appointment.
                                             </div>
