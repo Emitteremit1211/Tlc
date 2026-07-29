@@ -3,7 +3,6 @@ import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { Settings, BarChart3, SlidersHorizontal, Megaphone, Plus } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const sections = [
   {
     id: 1,
@@ -137,8 +136,8 @@ const cookieTypes = [
   { icon: Megaphone, label: 'Marketing', desc: 'Not currently in use. Requires explicit consent.' },
 ]
 
-const CookiesPolicy = () => {
-  const [openSections, setOpenSections] = useState({ 0: true })
+const Cookies = () => {
+      const [openSections, setOpenSections] = useState({ 0: true })
 
   const toggle = (idx) => {
     setOpenSections(prev => ({ ...prev, [idx]: !prev[idx] }))
@@ -320,4 +319,4 @@ const CookiesPolicy = () => {
   )
 }
 
-export default CookiesPolicy
+export default Cookies

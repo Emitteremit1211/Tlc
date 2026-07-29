@@ -191,8 +191,8 @@ const highlights = [
   { icon: Lock, title: 'No Warranties', desc: 'Site provided "as is" — see Section 8 for details.' },
 ]
 
-const TermsAndConditions = () => {
-  const [openSections, setOpenSections] = useState({ 0: true })
+const Terms = () => {
+      const [openSections, setOpenSections] = useState({ 0: true })
 
   const toggle = (idx) => {
     setOpenSections(prev => ({ ...prev, [idx]: !prev[idx] }))
@@ -355,8 +355,8 @@ const TermsAndConditions = () => {
       </div>
 
       <Footer />
-    </>
+      </>
   )
 }
 
-export default TermsAndConditions
+export default Terms

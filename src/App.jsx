@@ -23,11 +23,11 @@ import EmptyState from "./Components/blog/EmptyState";
 import SearchBar from "./Components/blog/SearchBar";
 import CTA from "./Components/blog/CTA";
 import BlogHero from "./Components/blog/BlogHero";
-import Cookiespolicy from "./Pages/Cookiespolicy";
-import Dataprotection from "./Pages/Dataprotection";
-import Termsandcondition from "./Pages/Termsandcondition";
-import Privacypolicy from "./Pages/Privacypolicy";
-import Websitedisclaimer from "./Pages/websitedisclaimer";
+import WebsiteDisclaim from "./Pages/WebsiteDisclaim";
+import Terms from "./Pages/Terms";
+import Privacy from "./Pages/Privacy";
+import Data from "./Pages/Data";
+import Cookies from "./Pages/Cookies";
 
 function App() {
   const location = useLocation();
@@ -60,11 +60,11 @@ function App() {
         <Route path="/skeleton" element={<SkeletonCard/>} />
         <Route path="/search" element={<SearchBar/>} />
         <Route path="/cta" element={<CTA/>} />
-        <Route path="/cookiesPolicy" element={<Cookiespolicy/>} />
-        <Route path="/dataprotection" element={<Dataprotection/>} />
-        <Route path="/Termsandcondition" element={<Termsandcondition/>} />
-        <Route path="/privacypolicy" element={<Privacypolicy/>} />
-        <Route path="/websitedisclaimer" element={<Websitedisclaimer/>} />
+        <Route path="/cookiesPolicy" element={<Cookies/>} />
+        <Route path="/dataprotection" element={<Data/>} />
+        <Route path="/Termsandcondition" element={<Terms/>} />
+        <Route path="/privacypolicy" element={<Privacy/>} />
+        <Route path="/websitedisclaimer" element={<WebsiteDisclaim/>} />
         {/* <Route path="/bloghero" element={</>} /> */}
 
 

@@ -223,8 +223,8 @@ Website: www.tlcassistliving.com`
   }
 ]
 
-const PrivacyPolicy = () => {
-  const [openSections, setOpenSections] = useState({ 0: true })
+const Privacy = () => {
+      const [openSections, setOpenSections] = useState({ 0: true })
 
   const toggle = (idx) => {
     setOpenSections(prev => ({ ...prev, [idx]: !prev[idx] }))
@@ -378,4 +378,4 @@ const PrivacyPolicy = () => {
   )
 }
 
-export default PrivacyPolicy
+export default Privacy

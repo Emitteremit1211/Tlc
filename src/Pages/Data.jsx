@@ -222,15 +222,14 @@ const regBadges = [
   { label: 'MGL c.93H', desc: 'MA data breach notification law' },
 ]
 
-const DataProtection = () => {
-  const [openSections, setOpenSections] = useState({ 0: true })
+const Data = () => {
+     const [openSections, setOpenSections] = useState({ 0: true })
 
   const toggle = (idx) => {
     setOpenSections(prev => ({ ...prev, [idx]: !prev[idx] }))
   }
-
   return (
-    <>
+        <>
       <Navbar />
 
       <style>{`
@@ -393,4 +392,4 @@ const DataProtection = () => {
   )
 }
 
-export default DataProtection
+export default Data
