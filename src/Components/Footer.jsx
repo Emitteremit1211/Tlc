@@ -241,9 +241,6 @@ const Footer = () => {
                                 designed and developed by 
                                 <a href="https://personal-portfolio-rho-three-54.vercel.app/" target='_blank' className='hover:text-blue-600'>Temitope</a>
                             </p>
-                            <Link to="/adminlogin" className="text-white/15 hover:text-white/40 transition">
-                                Admin
-                            </Link>
                         </div>
                     </div>
                 </div>
