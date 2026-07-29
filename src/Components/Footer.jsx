@@ -33,11 +33,11 @@ const services = [
 ]
 
 const legalLinks = [
-    { to: "/privacy", label: "Privacy Policy" },
-    { to: "/Terms", label: "Terms & Conditions" },
-    { to: "/cookies", label: "Cookie Policy" },
-    { to: "/data", label: "Data Protection" },
-    { to: "/disclaimer", label: "Website Disclaimer" },
+    { to: "/privacypolicy", label: "Privacy Policy" },
+    { to: "/Termsandcondition", label: "Terms & Conditions" },
+    { to: "/cookiespolicy", label: "Cookie Policy" },
+    { to: "/dataprotection", label: "Data Protection" },
+    { to: "/websitedisclaimer", label: "Website Disclaimer" },
 ]
 
 const Footer = () => {

@@ -23,6 +23,11 @@ import EmptyState from "./Components/blog/EmptyState";
 import SearchBar from "./Components/blog/SearchBar";
 import CTA from "./Components/blog/CTA";
 import BlogHero from "./Components/blog/BlogHero";
+import Cookiespolicy from "./Pages/Cookiespolicy";
+import Dataprotection from "./Pages/Dataprotection";
+import Termsandcondition from "./Pages/Termsandcondition";
+import Privacypolicy from "./Pages/Privacypolicy";
+import Websitedisclaimer from "./Pages/websitedisclaimer";
 
 function App() {
   const location = useLocation();
@@ -55,6 +60,11 @@ function App() {
         <Route path="/skeleton" element={<SkeletonCard/>} />
         <Route path="/search" element={<SearchBar/>} />
         <Route path="/cta" element={<CTA/>} />
+        <Route path="/cookiesPolicy" element={<Cookiespolicy/>} />
+        <Route path="/dataprotection" element={<Dataprotection/>} />
+        <Route path="/Termsandcondition" element={<Termsandcondition/>} />
+        <Route path="/privacypolicy" element={<Privacypolicy/>} />
+        <Route path="/websitedisclaimer" element={<Websitedisclaimer/>} />
         {/* <Route path="/bloghero" element={</>} /> */}
 
 

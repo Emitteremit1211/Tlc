@@ -108,11 +108,11 @@ const Newsletter = () => {
 
                 <div className="relative text-center">
 
-                    <h2 className="tlc-display text-3xl md:text-4xl font-semibold text-white">
+                    <h2 className="tlc-display text-3xl md:text-4xl font-semibold text-gray-500">
                         Stay Updated
                     </h2>
 
-                    <p className="text-white/60 mt-4 max-w-xl mx-auto">
+                    <p className="text-gray-500 mt-4 max-w-xl mx-auto">
                         Subscribe to receive healthcare insights, caregiver tips and staffing updates.
                     </p>
 
@@ -120,7 +120,7 @@ const Newsletter = () => {
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="tlc-input-dark flex-1 rounded-2xl px-5 py-3.5 outline-none text-sm text-white placeholder:text-white/40"
+                            className="bg-gray-700 flex-1 rounded-2xl px-5 py-3.5 outline-none text-sm text-gray-100 placeholder:text-white/40"
                         />
                         <button className="bg-[#1B8C86] hover:bg-[#166f6a] transition px-8 py-3.5 rounded-2xl text-white font-semibold flex items-center justify-center gap-2">
                             <Send size={16} />
