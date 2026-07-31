@@ -50,7 +50,7 @@ function App() {
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blogdetails" element={<BlogDetails />} />
+        <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path="/bloghero" element={<BlogHero />} />
         <Route path="/empty" element={<EmptyState/>} />
         <Route path="/featured" element={<FeaturedPost/>} />

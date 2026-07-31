@@ -171,18 +171,45 @@ const updateBlog = async (req, res) => {
 
 const deleteBlog = async (req, res) => {
     try {
-        const blog = await Blog.findByIdAndDelete(req.params.id);
+        console.log("DELETE REQUEST RECEIVED");
+        console.log("Blog ID:", req.params.id);
+
+        const blog = await Blog.findById(req.params.id);
 
         if (!blog) {
+            console.log("BLOG NOT FOUND:", req.params.id);
+
             return res.status(404).json({
                 error: "Blog not found",
             });
         }
 
-        res.json({
+        console.log("BLOG FOUND:", blog.title);
+
+        await Blog.findByIdAndDelete(req.params.id);
+
+        // Verify that it was actually deleted
+        const deletedBlog = await Blog.findById(req.params.id);
+
+        if (deletedBlog) {
+            console.log("❌ BLOG STILL EXISTS AFTER DELETE");
+
+            return res.status(500).json({
+                error: "Blog could not be deleted from database",
+            });
+        }
+
+        console.log("✅ BLOG SUCCESSFULLY DELETED:", blog.title);
+
+        res.status(200).json({
+            success: true,
             message: "Blog deleted successfully",
+            deletedId: req.params.id,
         });
+
     } catch (err) {
+        console.error("DELETE BLOG ERROR:", err);
+
         res.status(500).json({
             error: err.message,
         });
