@@ -74,48 +74,182 @@ const BlogDetails = () => {
                         font-size: 2rem;
                         font-weight: 600;
                         color: #0D2B3E;
-                        margin-top: 2.5rem;
-                        margin-bottom: 1rem;
+                        margin-top: 3rem;
+                        margin-bottom: 1.5rem;
+                        padding-bottom: 1rem;
+                        border-bottom: 3px solid #1B8C86;
+                        position: relative;
+                    }
+
+                    .prose-content h2::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -8px;
+                        width: 60px;
+                        height: 3px;
+                        background: linear-gradient(90deg, #1B8C86, #7FDCD2);
                     }
 
                     .prose-content h3 {
                         font-family: 'Fraunces', Georgia, serif;
-                        font-size: 1.5rem;
+                        font-size: 1.6rem;
                         font-weight: 600;
                         color: #1B8C86;
-                        margin-top: 2rem;
-                        margin-bottom: 0.75rem;
+                        margin-top: 2.5rem;
+                        margin-bottom: 1rem;
+                        padding-left: 1rem;
+                        border-left: 4px solid #7FDCD2;
                     }
 
                     .prose-content p {
                         margin-bottom: 1.5rem;
+                        line-height: 1.9;
                     }
 
                     .prose-content ul, .prose-content ol {
                         margin-left: 2rem;
-                        margin-bottom: 1.5rem;
+                        margin-bottom: 2rem;
                     }
 
                     .prose-content li {
-                        margin-bottom: 0.75rem;
+                        margin-bottom: 1rem;
+                        line-height: 1.7;
+                        padding-left: 0.5rem;
+                    }
+
+                    .prose-content ul li::marker {
+                        color: #1B8C86;
+                        font-weight: bold;
                     }
 
                     .prose-content blockquote {
-                        border-left: 4px solid #1B8C86;
-                        padding-left: 1.5rem;
-                        margin: 2rem 0;
+                        border-left: 5px solid #1B8C86;
+                        padding: 1.5rem;
+                        margin: 2.5rem 0;
+                        background: linear-gradient(90deg, rgba(27,140,134,0.05), rgba(127,220,210,0.05));
+                        border-radius: 8px;
                         font-style: italic;
-                        color: #4A5D6B;
+                        color: #0D2B3E;
+                        font-size: 1.1rem;
+                        font-weight: 500;
                     }
 
                     .prose-content a {
                         color: #1B8C86;
                         text-decoration: none;
-                        font-weight: 500;
+                        font-weight: 600;
+                        border-bottom: 2px solid #7FDCD2;
+                        transition: all 0.3s ease;
                     }
 
                     .prose-content a:hover {
-                        text-decoration: underline;
+                        color: #0D2B3E;
+                        border-bottom-color: #1B8C86;
+                        padding-bottom: 2px;
+                    }
+
+                    /* Highlight boxes for important info */
+                    .highlight-box {
+                        background: linear-gradient(135deg, #EAF6F6 0%, #F0FBFA 100%);
+                        border: 2px solid #1B8C86;
+                        border-radius: 12px;
+                        padding: 1.5rem;
+                        margin: 2rem 0;
+                    }
+
+                    .highlight-box strong {
+                        color: #1B8C86;
+                    }
+
+                    /* Content sections with visual separation */
+                    .content-section {
+                        background: white;
+                        border-radius: 12px;
+                        padding: 2rem;
+                        margin-bottom: 2rem;
+                        border: 1px solid rgba(27, 140, 134, 0.1);
+                        transition: all 0.3s ease;
+                    }
+
+                    .content-section:hover {
+                        box-shadow: 0 8px 30px rgba(27, 140, 134, 0.12);
+                        border-color: #7FDCD2;
+                    }
+
+                    /* Gradient divider */
+                    .content-divider {
+                        height: 3px;
+                        background: linear-gradient(90deg, transparent, #1B8C86, #7FDCD2, #1B8C86, transparent);
+                        margin: 3rem 0;
+                        border-radius: 2px;
+                    }
+
+                    @keyframes fadeInUp {
+                        from {
+                            opacity: 0;
+                            transform: translateY(30px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    .fade-in-up {
+                        animation: fadeInUp 0.6s ease-out;
+                    }
+
+                    @media (prefers-reduced-motion: reduce) {
+                        .fade-in-up {
+                            animation: none;
+                        }
+                    }
+
+                    .sticky-header {
+                        position: sticky;
+                        top: 0;
+                        z-index: 40;
+                        background: rgba(255, 255, 255, 0.95);
+                        backdrop-filter: blur(10px);
+                        border-bottom: 1px solid rgba(27, 140, 134, 0.1);
+                    }
+
+                    /* Table of contents style */
+                    .toc-item {
+                        padding: 0.75rem 0;
+                        border-bottom: 1px solid rgba(27, 140, 134, 0.1);
+                    }
+
+                    .toc-item:last-child {
+                        border-bottom: none;
+                    }
+
+                    .toc-item a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        text-decoration: none;
+                        color: #0D2B3E;
+                        transition: all 0.2s ease;
+                    }
+
+                    .toc-item a:hover {
+                        color: #1B8C86;
+                        padding-left: 0.5rem;
+                    }
+
+                    /* Key takeaway boxes */
+                    .key-takeaway {
+                        background: linear-gradient(135deg, #FFC9A3 0%, #FFD4B5 100%);
+                        border-left: 5px solid #FF9A5A;
+                        padding: 1.5rem;
+                        border-radius: 8px;
+                        margin: 2rem 0;
+                    }
+
+                    .key-takeaway strong {
+                        color: #8B4513;
                     }
 
                     @keyframes fadeInUp {
@@ -170,7 +304,7 @@ const BlogDetails = () => {
                             style={{ animationDelay: "0ms" }}
                         >
                             <ArrowLeft size={20} />
-                            <span>← Back to Blog</span>
+                            <span>← Back to Articles</span>
                         </Link>
 
                         {/* Title & Meta */}
@@ -304,13 +438,56 @@ const BlogDetails = () => {
                             </div>
                         </div>
 
-                        {/* Main Article Content */}
-                        <article className="prose-content mb-16">
-                            <div
-                                dangerouslySetInnerHTML={{
-                                    __html: blog.content,
-                                }}
-                            />
+                        {/* Main Article Content with Better Styling */}
+                        <article className="prose-content">
+                            {/* Quick Navigation / Table of Contents */}
+                            {blog.content && blog.content.includes('##') && (
+                                <div className="bg-gradient-to-r from-[#EAF6F6] to-[#F0FBFA] rounded-2xl p-8 mb-12 border border-[#1B8C86]/20">
+                                    <h3 className="tlc-display text-xl font-bold text-[#0D2B3E] mb-6">📑 Quick Navigation</h3>
+                                    <div className="space-y-3 max-h-96 overflow-y-auto">
+                                        <div className="toc-item">
+                                            <a href="#content" className="text-[#1B8C86] hover:text-[#0D2B3E]">
+                                                <span>Jump to Content →</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Content Wrapper with Enhanced Styling */}
+                            <div className="space-y-8">
+                                <div 
+                                    id="content"
+                                    className="prose-content"
+                                    dangerouslySetInnerHTML={{
+                                        __html: blog.content,
+                                    }}
+                                />
+                            </div>
+
+                            {/* Reading Time and Engagement Metrics */}
+                            <div className="content-divider"></div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                                <div className="content-section text-center">
+                                    <div className="text-4xl font-bold text-[#1B8C86] mb-2">
+                                        {blog.readTime || 5}
+                                    </div>
+                                    <p className="text-[#4A5D6B] font-semibold">Minutes Read</p>
+                                </div>
+                                <div className="content-section text-center">
+                                    <div className="text-4xl font-bold text-[#1B8C86] mb-2">
+                                        {blog.content ? Math.ceil(blog.content.split(' ').length / 200) : 0}
+                                    </div>
+                                    <p className="text-[#4A5D6B] font-semibold">Content Sections</p>
+                                </div>
+                                <div className="content-section text-center">
+                                    <div className="text-4xl font-bold text-[#1B8C86] mb-2">
+                                        {blog.tags ? blog.tags.length : 0}
+                                    </div>
+                                    <p className="text-[#4A5D6B] font-semibold">Key Topics</p>
+                                </div>
+                            </div>
                         </article>
 
                         {/* Tags */}
